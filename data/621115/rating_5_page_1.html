@@ -1,0 +1,3072 @@
+
+<div id="company-reviews">
+    <div class="row company_comments">
+        <div class="col-md-7">
+            <div class="progress-list flex flex-column">
+                <button type="button" class="btn-hidden  d-flex  btn btn-sm btn-link p-0 ml-auto align-items-center mb-4 js-reset_rating_filter" data-reset-path="/company-widget/621115/reviews">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         height="16" width="16" class="mr-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                    Скинути
+                </button>
+
+                
+                                    <div class="progress_item d-flex align-items-center justify-content-between js-get_review_by_rating" data-path-rating="/company-widget/621115/reviews" data-rating-value="5">
+                        <div class="progress-name text-nowrap">
+                            Відмінно
+                        </div>
+                        <div class="progress mb-0">
+                            <div class="progress-bar " role="progressbar" aria-valuenow="80"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                            </div>
+                        </div>
+                        <div class="progress-status text-nowrap">
+                            80 %
+                        </div>
+                    </div>
+                                    <div class="progress_item d-flex align-items-center justify-content-between js-get_review_by_rating" data-path-rating="/company-widget/621115/reviews" data-rating-value="4">
+                        <div class="progress-name text-nowrap">
+                            Добре
+                        </div>
+                        <div class="progress mb-0">
+                            <div class="progress-bar " role="progressbar" aria-valuenow="4"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:4%">
+                            </div>
+                        </div>
+                        <div class="progress-status text-nowrap">
+                            4 %
+                        </div>
+                    </div>
+                                    <div class="progress_item d-flex align-items-center justify-content-between js-get_review_by_rating" data-path-rating="/company-widget/621115/reviews" data-rating-value="3">
+                        <div class="progress-name text-nowrap">
+                            Непогано
+                        </div>
+                        <div class="progress mb-0">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="2"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:2%">
+                            </div>
+                        </div>
+                        <div class="progress-status text-nowrap">
+                            2 %
+                        </div>
+                    </div>
+                                    <div class="progress_item d-flex align-items-center justify-content-between js-get_review_by_rating" data-path-rating="/company-widget/621115/reviews" data-rating-value="2">
+                        <div class="progress-name text-nowrap">
+                            Погано
+                        </div>
+                        <div class="progress mb-0">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="3"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:3%">
+                            </div>
+                        </div>
+                        <div class="progress-status text-nowrap">
+                            3 %
+                        </div>
+                    </div>
+                                    <div class="progress_item d-flex align-items-center justify-content-between js-get_review_by_rating" data-path-rating="/company-widget/621115/reviews" data-rating-value="1">
+                        <div class="progress-name text-nowrap">
+                            Жахливо
+                        </div>
+                        <div class="progress mb-0">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="10"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                            </div>
+                        </div>
+                        <div class="progress-status text-nowrap">
+                            10 %
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    </div>
+
+    
+    <div class="row comments_list">
+        <div class="col-md-12">
+            
+            <div class="comments_list-filter js-wrap-vue">
+                <div class="row-flex" is="formable" inline-template :model="{&quot;field&quot;:&quot;review.createdAt&quot;,&quot;type&quot;:&quot;&quot;,&quot;branch&quot;:null}">
+                    <form method="get" action="/company-widget/621115/reviews" ref="form" id="review-filters-form">
+                        <div class="col col-sm-auto px-3 pl-sm-0" v-once>
+                            <select class="form-control dropdown-select" name="field" v-model="model.field" @change="submit" v-select2>
+                                <option value="review.createdAt">
+                                    Спершу нові
+                                </option>
+                                <option value="review.ratingTotal">
+                                    Найвищий рейтинг
+                                </option>
+                                <option value="lowestRating">
+                                    Найнижчий рейтинг
+                                </option>
+                                <option value="review.votes">
+                                    Найкорисніші
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col col-sm-auto px-3 pr-sm-0">
+                            <select class="form-control dropdown-select" name="type" v-model="model.type" @change="submit" v-select2>
+                                <option value="">
+                                    Всі відгуки
+                                </option>
+                                <option value="0">
+                                    ТОП 20
+                                </option>
+                                <option value="3">
+                                    Google
+                                </option>
+                                                    </select>
+                        </div>
+                                                    <div class="col col-sm-auto px-3 pr-sm-0">
+                                <select class="form-control dropdown-select" name="branch" v-model="model.branch" @change="submit" v-select2>
+                                    <option value="null">Всі адреси</option>
+                                                                            <option value="714613">Львів, Гнатюка, 4</option>
+                                                                            <option value="714614">Львів, Вірменська, 13</option>
+                                                                            <option value="841089">Львів, Вірменська, 13</option>
+                                                                            <option value="841103">м. Львів, вулиця Сербська, 4</option>
+                                                                            <option value="847888">м. Львів, Друкарська, 6а</option>
+                                                                            <option value="923538">Львів, Академіка Гнатюка, 3-1</option>
+                                                                    </select>
+                            </div>
+                                            </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 js-list">
+                                                <div class="media" id="review-6753813">
+        <div class="visible-xs">
+        <div class="media-left">
+            <img class="media-object img-circle lazy" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSko2VlNXNFE1YlpNNDViVGktWEQ2ZmQ0c3NtaHpqS3dndU9TcEFYbmh5LU1ZTjFnPXczMDAtaDMwMC1wLXJwLW1vLWJyMTAw.jpeg?expires=2077605306&amp;signature=4042be30b518810c5c1768d4954c6ae91de8619723355c0f31ddfab3591c70f4"
+                 alt="Dima Shpak"
+            >
+        </div>
+
+        <div class="media-body">
+            <span>Dima Shpak</span>
+            <div class="comment-data">
+                12 вересня 2025
+            </div>
+        </div>
+        <div class="media-right">
+            <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="media-text">
+                            Сервіс топ, смачні напої, гарна атмосфера і музика. Рекомендую
+                    </div>
+
+        
+        <div class="media-footer">
+            <a data-toggle="collapse"
+   href="#collapse_mobile_text_6753813"
+   data-href="/lviv/company-review/6753813/answer"
+   class="js-company-review-answer visible-xs-inline">
+    <i class="material-icons">chat_bubble</i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753813%23company-review-6753813" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753813">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753813%23company-review-6753813" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753813">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753813%23company-review-6753813" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753813">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753813"
+       data-href="/lviv/company-review/like?id=6753813">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753813" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>
+<div class="collapse" id="collapse_mobile_text_6753813">
+    <div class="text-center">
+        <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>    </div>
+</div>        </div>
+
+        
+    </div>
+
+        <div class="hidden-xs">
+        <div class="media-left">
+            <img class="media-object img-circle" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSko2VlNXNFE1YlpNNDViVGktWEQ2ZmQ0c3NtaHpqS3dndU9TcEFYbmh5LU1ZTjFnPXczMDAtaDMwMC1wLXJwLW1vLWJyMTAw.jpeg?expires=2077605306&amp;signature=4042be30b518810c5c1768d4954c6ae91de8619723355c0f31ddfab3591c70f4"
+                 alt="Dima Shpak">
+            <span>Dima Shpak</span>
+        </div>
+        <div class="media-body">
+            <div class="media-heading d-sm-flex align-items-center">
+
+                <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                    <div class="comment-adress ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512" height="18" class="fa text-muted media-middle">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+                        </svg>
+                        Академіка Гнатюка, 3-1
+                    </div>
+                
+                <div class="comment-data ml-sm-auto">
+                    12 вересня 2025
+                </div>
+
+            </div>
+
+            <div class="media-text">
+                                    Сервіс топ, смачні напої, гарна атмосфера і музика. Рекомендую
+                            </div>
+
+            
+            <div class="media-footer">
+                <a data-toggle="collapse"
+   href="#collapse_desctop_text_6753813"
+   class="hidden-xs js-company-review-answer"
+   data-href="/lviv/company-review/6753813/answer">
+    <i class="material-icons">
+        chat_bubble
+    </i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753813%23company-review-6753813" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753813">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753813%23company-review-6753813" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753813">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753813%23company-review-6753813" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753813">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753813"
+       data-href="/lviv/company-review/like?id=6753813">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753813" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>            </div>
+
+            <div class="collapse" id="collapse_desctop_text_6753813">
+                <div class="text-center">
+                    <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal modal-fullscreen photo-modal modal-review fade" id="modal-review-6753813">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close close-mobile-modal" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="slide-block">
+                    <div class="owl-carousel">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#modal-review-6753813").find('.owl-carousel').owlCarousel({
+        margin: 10,
+        items: 1,
+        navText: [
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>`,
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>`
+        ],
+        dots: false,
+        nav: true,
+        lazyLoad: true,
+    });
+</script>
+
+                
+                
+                                                <div class="media" id="review-6753814">
+        <div class="visible-xs">
+        <div class="media-left">
+            <img class="media-object img-circle lazy" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHJPVU1rclBQUEZ4TGV6RzBSSmtGMjBMc0NWMWUyTzlWRXh3bXZfMlhrV1lMYVNBPXczMDAtaDMwMC1wLXJwLW1vLWJyMTAw.jpeg?expires=2077605306&amp;signature=c1463fe42695b5c6b324146d426501256a218a34d0391280aab4310c3162c186"
+                 alt="Артем Юрченко"
+            >
+        </div>
+
+        <div class="media-body">
+            <span>Артем Юрченко</span>
+            <div class="comment-data">
+                12 вересня 2025
+            </div>
+        </div>
+        <div class="media-right">
+            <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="media-text">
+                            Груша-яблуко то є шедевр! Сервіс на висоті, заклад дуже приємний! Щиро рекомендую!
+                    </div>
+
+        
+        <div class="media-footer">
+            <a data-toggle="collapse"
+   href="#collapse_mobile_text_6753814"
+   data-href="/lviv/company-review/6753814/answer"
+   class="js-company-review-answer visible-xs-inline">
+    <i class="material-icons">chat_bubble</i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753814%23company-review-6753814" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753814">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753814%23company-review-6753814" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753814">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753814%23company-review-6753814" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753814">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753814"
+       data-href="/lviv/company-review/like?id=6753814">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753814" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>
+<div class="collapse" id="collapse_mobile_text_6753814">
+    <div class="text-center">
+        <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>    </div>
+</div>        </div>
+
+        
+    </div>
+
+        <div class="hidden-xs">
+        <div class="media-left">
+            <img class="media-object img-circle" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHJPVU1rclBQUEZ4TGV6RzBSSmtGMjBMc0NWMWUyTzlWRXh3bXZfMlhrV1lMYVNBPXczMDAtaDMwMC1wLXJwLW1vLWJyMTAw.jpeg?expires=2077605306&amp;signature=c1463fe42695b5c6b324146d426501256a218a34d0391280aab4310c3162c186"
+                 alt="Артем Юрченко">
+            <span>Артем Юрченко</span>
+        </div>
+        <div class="media-body">
+            <div class="media-heading d-sm-flex align-items-center">
+
+                <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                    <div class="comment-adress ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512" height="18" class="fa text-muted media-middle">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+                        </svg>
+                        Академіка Гнатюка, 3-1
+                    </div>
+                
+                <div class="comment-data ml-sm-auto">
+                    12 вересня 2025
+                </div>
+
+            </div>
+
+            <div class="media-text">
+                                    Груша-яблуко то є шедевр! Сервіс на висоті, заклад дуже приємний! Щиро рекомендую!
+                            </div>
+
+            
+            <div class="media-footer">
+                <a data-toggle="collapse"
+   href="#collapse_desctop_text_6753814"
+   class="hidden-xs js-company-review-answer"
+   data-href="/lviv/company-review/6753814/answer">
+    <i class="material-icons">
+        chat_bubble
+    </i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753814%23company-review-6753814" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753814">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753814%23company-review-6753814" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753814">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753814%23company-review-6753814" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753814">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753814"
+       data-href="/lviv/company-review/like?id=6753814">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753814" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>            </div>
+
+            <div class="collapse" id="collapse_desctop_text_6753814">
+                <div class="text-center">
+                    <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal modal-fullscreen photo-modal modal-review fade" id="modal-review-6753814">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close close-mobile-modal" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="slide-block">
+                    <div class="owl-carousel">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#modal-review-6753814").find('.owl-carousel').owlCarousel({
+        margin: 10,
+        items: 1,
+        navText: [
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>`,
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>`
+        ],
+        dots: false,
+        nav: true,
+        lazyLoad: true,
+    });
+</script>
+
+                
+                
+                                                <div class="media" id="review-6753800">
+        <div class="visible-xs">
+        <div class="media-left">
+            <img class="media-object img-circle lazy" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSnVuaEdFNWJKZGdBRnUxTF9CeFk4MlBrN1dlcFVWaXZ5UHhvX0N6WjNVYjlsaEkyYz13MzAwLWgzMDAtcC1ycC1tby1icjEwMA==.jpeg?expires=2077605306&amp;signature=bf92ea823a869c4d2768600a274280830eafef68024aeb2f72ca7a8f15503317"
+                 alt="Влад Миколенко"
+            >
+        </div>
+
+        <div class="media-body">
+            <span>Влад Миколенко</span>
+            <div class="comment-data">
+                05 вересня 2025
+            </div>
+        </div>
+        <div class="media-right">
+            <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="media-text">
+                            Хороший заклад , смачна їжа , ввічливий персонаж
+                    </div>
+
+        
+        <div class="media-footer">
+            <a data-toggle="collapse"
+   href="#collapse_mobile_text_6753800"
+   data-href="/lviv/company-review/6753800/answer"
+   class="js-company-review-answer visible-xs-inline">
+    <i class="material-icons">chat_bubble</i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753800%23company-review-6753800" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753800%23company-review-6753800" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753800%23company-review-6753800" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753800"
+       data-href="/lviv/company-review/like?id=6753800">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753800" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>
+<div class="collapse" id="collapse_mobile_text_6753800">
+    <div class="text-center">
+        <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>    </div>
+</div>        </div>
+
+        
+    </div>
+
+        <div class="hidden-xs">
+        <div class="media-left">
+            <img class="media-object img-circle" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jSnVuaEdFNWJKZGdBRnUxTF9CeFk4MlBrN1dlcFVWaXZ5UHhvX0N6WjNVYjlsaEkyYz13MzAwLWgzMDAtcC1ycC1tby1icjEwMA==.jpeg?expires=2077605306&amp;signature=bf92ea823a869c4d2768600a274280830eafef68024aeb2f72ca7a8f15503317"
+                 alt="Влад Миколенко">
+            <span>Влад Миколенко</span>
+        </div>
+        <div class="media-body">
+            <div class="media-heading d-sm-flex align-items-center">
+
+                <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                    <div class="comment-adress ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512" height="18" class="fa text-muted media-middle">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+                        </svg>
+                        вулиця Сербська, 4
+                    </div>
+                
+                <div class="comment-data ml-sm-auto">
+                    05 вересня 2025
+                </div>
+
+            </div>
+
+            <div class="media-text">
+                                    Хороший заклад , смачна їжа , ввічливий персонаж
+                            </div>
+
+            
+            <div class="media-footer">
+                <a data-toggle="collapse"
+   href="#collapse_desctop_text_6753800"
+   class="hidden-xs js-company-review-answer"
+   data-href="/lviv/company-review/6753800/answer">
+    <i class="material-icons">
+        chat_bubble
+    </i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753800%23company-review-6753800" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753800%23company-review-6753800" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753800%23company-review-6753800" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753800"
+       data-href="/lviv/company-review/like?id=6753800">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753800" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>            </div>
+
+            <div class="collapse" id="collapse_desctop_text_6753800">
+                <div class="text-center">
+                    <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal modal-fullscreen photo-modal modal-review fade" id="modal-review-6753800">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close close-mobile-modal" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="slide-block">
+                    <div class="owl-carousel">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#modal-review-6753800").find('.owl-carousel').owlCarousel({
+        margin: 10,
+        items: 1,
+        navText: [
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>`,
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>`
+        ],
+        dots: false,
+        nav: true,
+        lazyLoad: true,
+    });
+</script>
+
+                
+                
+                                                <div class="media" id="review-6753797">
+        <div class="visible-xs">
+        <div class="media-left">
+            <img class="media-object img-circle lazy" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHhCTkRSX3pnQVMtSy1VVXJrRmQxbmIwX1B4RU1ucERXaE9NUzRkMk9NMUtmYUxNaz13MzAwLWgzMDAtcC1ycC1tby1icjEwMA==.jpeg?expires=2077605306&amp;signature=0afcf25ece92976879faafe7ba79df42ae7d311e6a04c82e854209c7c2fe8882"
+                 alt="Dasha"
+            >
+        </div>
+
+        <div class="media-body">
+            <span>Dasha</span>
+            <div class="comment-data">
+                05 вересня 2025
+            </div>
+        </div>
+        <div class="media-right">
+            <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="media-text">
+                            Класне місце! Атмосфера невимушена, персонал привітний. Наливки смачні, вибір різноманітний, а ціни доступні. Ідеальний варіант, щоб провести вечір у компанії друзів. Обов’язково повернусь ще!
+                    </div>
+
+        
+        <div class="media-footer">
+            <a data-toggle="collapse"
+   href="#collapse_mobile_text_6753797"
+   data-href="/lviv/company-review/6753797/answer"
+   class="js-company-review-answer visible-xs-inline">
+    <i class="material-icons">chat_bubble</i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753797%23company-review-6753797" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753797">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753797%23company-review-6753797" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753797">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753797%23company-review-6753797" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753797">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753797"
+       data-href="/lviv/company-review/like?id=6753797">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753797" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>
+<div class="collapse" id="collapse_mobile_text_6753797">
+    <div class="text-center">
+        <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>    </div>
+</div>        </div>
+
+        
+    </div>
+
+        <div class="hidden-xs">
+        <div class="media-left">
+            <img class="media-object img-circle" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTHhCTkRSX3pnQVMtSy1VVXJrRmQxbmIwX1B4RU1ucERXaE9NUzRkMk9NMUtmYUxNaz13MzAwLWgzMDAtcC1ycC1tby1icjEwMA==.jpeg?expires=2077605306&amp;signature=0afcf25ece92976879faafe7ba79df42ae7d311e6a04c82e854209c7c2fe8882"
+                 alt="Dasha">
+            <span>Dasha</span>
+        </div>
+        <div class="media-body">
+            <div class="media-heading d-sm-flex align-items-center">
+
+                <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                    <div class="comment-adress ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512" height="18" class="fa text-muted media-middle">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+                        </svg>
+                        вулиця Сербська, 4
+                    </div>
+                
+                <div class="comment-data ml-sm-auto">
+                    05 вересня 2025
+                </div>
+
+            </div>
+
+            <div class="media-text">
+                                    Класне місце! Атмосфера невимушена, персонал привітний. Наливки смачні, вибір різноманітний, а ціни доступні. Ідеальний варіант, щоб провести вечір у компанії друзів. Обов’язково повернусь ще!
+                            </div>
+
+            
+            <div class="media-footer">
+                <a data-toggle="collapse"
+   href="#collapse_desctop_text_6753797"
+   class="hidden-xs js-company-review-answer"
+   data-href="/lviv/company-review/6753797/answer">
+    <i class="material-icons">
+        chat_bubble
+    </i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753797%23company-review-6753797" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753797">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753797%23company-review-6753797" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753797">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753797%23company-review-6753797" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753797">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753797"
+       data-href="/lviv/company-review/like?id=6753797">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753797" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>            </div>
+
+            <div class="collapse" id="collapse_desctop_text_6753797">
+                <div class="text-center">
+                    <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal modal-fullscreen photo-modal modal-review fade" id="modal-review-6753797">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close close-mobile-modal" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="slide-block">
+                    <div class="owl-carousel">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#modal-review-6753797").find('.owl-carousel').owlCarousel({
+        margin: 10,
+        items: 1,
+        navText: [
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>`,
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>`
+        ],
+        dots: false,
+        nav: true,
+        lazyLoad: true,
+    });
+</script>
+
+                
+                
+                                                <div class="media" id="review-6753798">
+        <div class="visible-xs">
+        <div class="media-left">
+            <img class="media-object img-circle lazy" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FMVi1ValVWbl81eldoQmI5c3BBejN0dkNaRzZrYlhOemRpYTJRVEhYeTVUWnRuSXJhUjBEYjA9dzMwMC1oMzAwLXAtcnAtbW8tYnIxMDA=.jpeg?expires=2077605306&amp;signature=c9195ce6fa2b21619735f37bbdfa535779b50d7f5b776536f5b8d16acb12cd13"
+                 alt="Вероника Стаховець"
+            >
+        </div>
+
+        <div class="media-body">
+            <span>Вероника Стаховець</span>
+            <div class="comment-data">
+                05 вересня 2025
+            </div>
+        </div>
+        <div class="media-right">
+            <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="media-text">
+                            Дуже приємний і атмосферний заклад. Дуже сподобалось. Мы чудово провели час з друзями)
+                    </div>
+
+        
+        <div class="media-footer">
+            <a data-toggle="collapse"
+   href="#collapse_mobile_text_6753798"
+   data-href="/lviv/company-review/6753798/answer"
+   class="js-company-review-answer visible-xs-inline">
+    <i class="material-icons">chat_bubble</i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753798%23company-review-6753798" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753798">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753798%23company-review-6753798" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753798">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753798%23company-review-6753798" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753798">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753798"
+       data-href="/lviv/company-review/like?id=6753798">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753798" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>
+<div class="collapse" id="collapse_mobile_text_6753798">
+    <div class="text-center">
+        <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>    </div>
+</div>        </div>
+
+        
+    </div>
+
+        <div class="hidden-xs">
+        <div class="media-left">
+            <img class="media-object img-circle" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FMVi1ValVWbl81eldoQmI5c3BBejN0dkNaRzZrYlhOemRpYTJRVEhYeTVUWnRuSXJhUjBEYjA9dzMwMC1oMzAwLXAtcnAtbW8tYnIxMDA=.jpeg?expires=2077605306&amp;signature=c9195ce6fa2b21619735f37bbdfa535779b50d7f5b776536f5b8d16acb12cd13"
+                 alt="Вероника Стаховець">
+            <span>Вероника Стаховець</span>
+        </div>
+        <div class="media-body">
+            <div class="media-heading d-sm-flex align-items-center">
+
+                <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                    <div class="comment-adress ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512" height="18" class="fa text-muted media-middle">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+                        </svg>
+                        вулиця Сербська, 4
+                    </div>
+                
+                <div class="comment-data ml-sm-auto">
+                    05 вересня 2025
+                </div>
+
+            </div>
+
+            <div class="media-text">
+                                    Дуже приємний і атмосферний заклад. Дуже сподобалось. Мы чудово провели час з друзями)
+                            </div>
+
+            
+            <div class="media-footer">
+                <a data-toggle="collapse"
+   href="#collapse_desctop_text_6753798"
+   class="hidden-xs js-company-review-answer"
+   data-href="/lviv/company-review/6753798/answer">
+    <i class="material-icons">
+        chat_bubble
+    </i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753798%23company-review-6753798" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753798">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753798%23company-review-6753798" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753798">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753798%23company-review-6753798" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753798">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753798"
+       data-href="/lviv/company-review/like?id=6753798">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753798" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>            </div>
+
+            <div class="collapse" id="collapse_desctop_text_6753798">
+                <div class="text-center">
+                    <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal modal-fullscreen photo-modal modal-review fade" id="modal-review-6753798">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close close-mobile-modal" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="slide-block">
+                    <div class="owl-carousel">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#modal-review-6753798").find('.owl-carousel').owlCarousel({
+        margin: 10,
+        items: 1,
+        navText: [
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>`,
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>`
+        ],
+        dots: false,
+        nav: true,
+        lazyLoad: true,
+    });
+</script>
+
+                
+                                                        <div class="media media-el media__da hidden-xs">
+                            <div class="row">
+        <div class="col-sm-6 text-center">
+            <div class="center-block">
+                
+
+<template id="w1575635462">
+    <!-- GPT AdSlot 1 for Ad unit '20ua(300x250_1)' ### Size: [[300,250]] -->
+<div id='div-gpt-ad-1216761-1'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1216761-1'); });
+  </script>
+</div>
+</template>
+
+<script>
+    $(function () {
+        var $el = $('#w1575635462');
+        if (!$el.parent().is(':visible')) {
+            return;
+        }
+
+                $el.replaceWith($el.html());
+    });
+</script>            </div>
+        </div>
+        <div class="col-sm-6 text-center">
+            <div class="center-block">
+                
+
+<template id="w1001947325">
+    <!-- End AdSlot 1 -->
+
+<!-- GPT AdSlot 2 for Ad unit '20ua(300x250_2)' ### Size: [[300,250]] -->
+<div id='div-gpt-ad-1216761-2'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1216761-2'); });
+  </script>
+</div>
+</template>
+
+<script>
+    $(function () {
+        var $el = $('#w1001947325');
+        if (!$el.parent().is(':visible')) {
+            return;
+        }
+
+                $el.replaceWith($el.html());
+    });
+</script>            </div>
+        </div>
+    </div>
+                    </div>
+                    <div class="media media-el media__da visible-xs">
+                            
+
+<template id="w1827335499">
+    <!-- End AdSlot 2 -->
+
+<!-- GPT AdSlot 3 for Ad unit '20ua(300x250_mob)' ### Size: [[300,250]] -->
+<div id='div-gpt-ad-1216761-3'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1216761-3'); });
+  </script>
+</div>
+</template>
+
+<script>
+    $(function () {
+        var $el = $('#w1827335499');
+        if (!$el.parent().is(':visible')) {
+            return;
+        }
+
+                $el.replaceWith($el.html());
+    });
+</script>                    </div>
+                
+                                                <div class="media" id="review-6753799">
+        <div class="visible-xs">
+        <div class="media-left">
+            <img class="media-object img-circle lazy" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FMVi1ValZWMThValpQYXpvODIwb1dHQjh1T0lIS1kxczgyVVptcUJWM2FNeENTZWxBekVBWnc9dzMwMC1oMzAwLXAtcnAtbW8tYnIxMDA=.jpeg?expires=2077605306&amp;signature=cd2912feb508dc776b219bca34e3afac5a9c42eebce5267f6ea471f275e6c3e2"
+                 alt="Ольга Скрильник"
+            >
+        </div>
+
+        <div class="media-body">
+            <span>Ольга Скрильник</span>
+            <div class="comment-data">
+                05 вересня 2025
+            </div>
+        </div>
+        <div class="media-right">
+            <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="media-text">
+                            Класний заклад,та сама атмосфера Львову з друзями
+                    </div>
+
+        
+        <div class="media-footer">
+            <a data-toggle="collapse"
+   href="#collapse_mobile_text_6753799"
+   data-href="/lviv/company-review/6753799/answer"
+   class="js-company-review-answer visible-xs-inline">
+    <i class="material-icons">chat_bubble</i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753799%23company-review-6753799" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753799">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753799%23company-review-6753799" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753799">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753799%23company-review-6753799" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753799">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753799"
+       data-href="/lviv/company-review/like?id=6753799">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753799" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>
+<div class="collapse" id="collapse_mobile_text_6753799">
+    <div class="text-center">
+        <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>    </div>
+</div>        </div>
+
+        
+    </div>
+
+        <div class="hidden-xs">
+        <div class="media-left">
+            <img class="media-object img-circle" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FMVi1ValZWMThValpQYXpvODIwb1dHQjh1T0lIS1kxczgyVVptcUJWM2FNeENTZWxBekVBWnc9dzMwMC1oMzAwLXAtcnAtbW8tYnIxMDA=.jpeg?expires=2077605306&amp;signature=cd2912feb508dc776b219bca34e3afac5a9c42eebce5267f6ea471f275e6c3e2"
+                 alt="Ольга Скрильник">
+            <span>Ольга Скрильник</span>
+        </div>
+        <div class="media-body">
+            <div class="media-heading d-sm-flex align-items-center">
+
+                <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                    <div class="comment-adress ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512" height="18" class="fa text-muted media-middle">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+                        </svg>
+                        вулиця Сербська, 4
+                    </div>
+                
+                <div class="comment-data ml-sm-auto">
+                    05 вересня 2025
+                </div>
+
+            </div>
+
+            <div class="media-text">
+                                    Класний заклад,та сама атмосфера Львову з друзями
+                            </div>
+
+            
+            <div class="media-footer">
+                <a data-toggle="collapse"
+   href="#collapse_desctop_text_6753799"
+   class="hidden-xs js-company-review-answer"
+   data-href="/lviv/company-review/6753799/answer">
+    <i class="material-icons">
+        chat_bubble
+    </i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753799%23company-review-6753799" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753799">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753799%23company-review-6753799" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753799">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753799%23company-review-6753799" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753799">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753799"
+       data-href="/lviv/company-review/like?id=6753799">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753799" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>            </div>
+
+            <div class="collapse" id="collapse_desctop_text_6753799">
+                <div class="text-center">
+                    <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal modal-fullscreen photo-modal modal-review fade" id="modal-review-6753799">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close close-mobile-modal" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="slide-block">
+                    <div class="owl-carousel">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#modal-review-6753799").find('.owl-carousel').owlCarousel({
+        margin: 10,
+        items: 1,
+        navText: [
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>`,
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>`
+        ],
+        dots: false,
+        nav: true,
+        lazyLoad: true,
+    });
+</script>
+
+                
+                
+                                                <div class="media" id="review-6753796">
+        <div class="visible-xs">
+        <div class="media-left">
+            <img class="media-object img-circle lazy" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FMVi1ValhtU0FOeFBKejNSTDUwMWlJM3FJbFRhZVEySU9EZFFwU2JoODcybUVCeHltOFEwdzF6PXczMDAtaDMwMC1wLXJwLW1vLWJyMTAw.jpeg?expires=2077605306&amp;signature=e043a692ba19a4d248c59d4c97a60fe3aa541e3d606dd967f5c0d640706bbfb2"
+                 alt="Yaroslav Zobniev"
+            >
+        </div>
+
+        <div class="media-body">
+            <span>Yaroslav Zobniev</span>
+            <div class="comment-data">
+                05 вересня 2025
+            </div>
+        </div>
+        <div class="media-right">
+            <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="media-text">
+                            В закладі напаявся стільки, шо майже нічого не памʼятаю, але дивлячись з того, що на наступний ранок голова не боліла і з гаманця грошей багато не пішло, заклад кайф
+                    </div>
+
+        
+        <div class="media-footer">
+            <a data-toggle="collapse"
+   href="#collapse_mobile_text_6753796"
+   data-href="/lviv/company-review/6753796/answer"
+   class="js-company-review-answer visible-xs-inline">
+    <i class="material-icons">chat_bubble</i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753796%23company-review-6753796" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753796">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753796%23company-review-6753796" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753796">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753796%23company-review-6753796" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753796">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753796"
+       data-href="/lviv/company-review/like?id=6753796">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753796" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>
+<div class="collapse" id="collapse_mobile_text_6753796">
+    <div class="text-center">
+        <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>    </div>
+</div>        </div>
+
+        
+    </div>
+
+        <div class="hidden-xs">
+        <div class="media-left">
+            <img class="media-object img-circle" src="/img/empty.png?a32edea79"
+                 data-src="https://top20.ua/media-resize-url/90,90/aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FMVi1ValhtU0FOeFBKejNSTDUwMWlJM3FJbFRhZVEySU9EZFFwU2JoODcybUVCeHltOFEwdzF6PXczMDAtaDMwMC1wLXJwLW1vLWJyMTAw.jpeg?expires=2077605306&amp;signature=e043a692ba19a4d248c59d4c97a60fe3aa541e3d606dd967f5c0d640706bbfb2"
+                 alt="Yaroslav Zobniev">
+            <span>Yaroslav Zobniev</span>
+        </div>
+        <div class="media-body">
+            <div class="media-heading d-sm-flex align-items-center">
+
+                <div class="company_page-group">
+
+    <div class="company_page--top">
+                    <span class="pseudo-link mr-2"
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-template='<div class="popover pop_icons" role="tooltip">
+              <div class="arrow"></div><div class="popover-content"></div></div>'
+                  data-content="відгук з google maps">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" height="14" class="media-middle">
+                        <path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+                    </svg>
+                </span>
+        
+        
+        
+                    <div class="label label-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                </svg>
+                <span>
+                    5.0
+                </span>
+            </div>
+        
+    </div>
+
+            <div class="rateit-status list-group">
+            <div class="list-group-item">
+                <div class="list-name">
+                    Обслуговування
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Ціна
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Якість
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="list-name">
+                    Загальна оцінка
+                </div>
+                <div class="label label-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" height="14" style="vertical-align: sub;">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                            </svg>
+                    <span>
+                                5.0
+                            </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                    <div class="comment-adress ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 384 512" height="18" class="fa text-muted media-middle">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"></path>
+                        </svg>
+                        вулиця Сербська, 4
+                    </div>
+                
+                <div class="comment-data ml-sm-auto">
+                    05 вересня 2025
+                </div>
+
+            </div>
+
+            <div class="media-text">
+                                    В закладі напаявся стільки, шо майже нічого не памʼятаю, але дивлячись з того, що на наступний ранок голова не боліла і з гаманця грошей багато не пішло, заклад кайф
+                            </div>
+
+            
+            <div class="media-footer">
+                <a data-toggle="collapse"
+   href="#collapse_desctop_text_6753796"
+   class="hidden-xs js-company-review-answer"
+   data-href="/lviv/company-review/6753796/answer">
+    <i class="material-icons">
+        chat_bubble
+    </i>
+    Відповісти
+</a>
+
+<div class="pseudo-link">
+    <div class="arrow"></div>
+    <i class="material-icons">reply</i>
+    <span>
+        Поділитися
+    </span>
+    <div class="share_drop">
+    <div class="arrow"></div>
+    <div>
+        Поділіться відгуком зі своїми друзями
+    </div>
+    <ul class="list-inline">
+        <li>
+            <a data-href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753796%23company-review-6753796" class="btn btn-block btn-fb js-share" data-provider="fb" data-type="review" data-id="6753796">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" height="22">
+                    <path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="viber://forward?text=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753796%23company-review-6753796" class="btn btn-block btn-viber js-share" data-provider="viber" data-type="review" data-id="6753796">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                   <path d="M444 49.9C431.3 38.2 379.9 .9 265.3 .4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9 .4-85.7 .4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9 .4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9 .6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4 .7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5 .9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9 .1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7 .5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1 .8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=https%3A%2F%2Ftop20.ua%2Flviv%2Frestorani-kafe-bari%2Frestorani%2Frestoran-biliy-naliv.html%3FshareReview%3D6753796%23company-review-6753796" class="btn btn-block btn-mail js-share" data-provider="email" data-type="review" data-id="6753796">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" height="22">
+                    <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</div></div>
+        <a data-content="0 користувачів вважають цей відгук корисним"
+       class="js-review-like" data-review="6753796"
+       data-href="/lviv/company-review/like?id=6753796">
+        <i class="material-icons">
+            thumb_up_alt
+        </i>
+        Корисно     </a>
+    <a href="#modalComplainReview" class="pseudo-link js-modalComplainReview" data-review-id="6753796" data-complain-url="https://top20.ua/lviv/company-review/complain">
+    <i class="material-icons">
+        warning
+    </i>
+    Поскаржитися
+</a>            </div>
+
+            <div class="collapse" id="collapse_desctop_text_6753796">
+                <div class="text-center">
+                    <i class="fa fa-cog fa-spin fa-fw fa-2x"></i>                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal modal-fullscreen photo-modal modal-review fade" id="modal-review-6753796">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close close-mobile-modal" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="slide-block">
+                    <div class="owl-carousel">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#modal-review-6753796").find('.owl-carousel').owlCarousel({
+        margin: 10,
+        items: 1,
+        navText: [
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>`,
+            `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="28" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>`
+        ],
+        dots: false,
+        nav: true,
+        lazyLoad: true,
+    });
+</script>
+
+                
+                
+            
+            
+                                            <div class="center-block text-center">
+                    <span class="btn btn-lg see_all js-more"
+                          data-href="aHR0cHM6Ly90b3AyMC51YS9jb21wYW55LXdpZGdldC82MjExMTUvcmV2aWV3cz9yYXRpbmdWYWx1ZT01JnBhZ2U9Mg==">
+                        <span>
+                            <i class="material-icons visible-xs-inline media-middle">replay</i>
+                            Читати ще 202 відгука
+                        </span>
+                        <span>
+                            <i class="material-icons visible-xs-inline media-middle">replay</i>
+                            Читати ще 202 відгука
+                        </span>
+                    </span>
+                </div>
+                    </div>
+    </div>
+    <script>
+        $(function () {
+            new TwentyUa.View.CompanyReviewList({el: '#company-reviews'}).render();
+            Vue.nextTick(function () {
+                $(".dropdown-select").select2({
+                    minimumResultsForSearch: -1,
+                    dropdownCssClass: "dropdown-drop",
+                    dropdownAutoWidth : true
+                });
+
+                $('#review-filters-form').submit(function (e) {
+                    e.preventDefault();
+                    reloadByForm('#company-reviews', this);
+                })
+            });
+
+            $(".progress-list").on("click", function (ev) {
+                ev.preventDefault();
+                if ($(ev.target).hasClass('progress_item')) {
+                    $('.progress_item').each(function () {
+                        $(this).removeClass('active');
+                    })
+                    $(ev.target).addClass('active');
+                    $(".progress-list").addClass('show');
+                    $('.btn-hidden').removeClass('d-none');
+                    $(".btn-hidden").addClass('d-flex');
+                    var pathRender = $(ev.target).attr("data-path-rating");
+                    var ratingValue = $(ev.target).attr("data-rating-value");
+
+                    var $containerReviews = $("#company-reviews");
+
+                    $.ajax({
+                        type: "GET",
+                        url: pathRender,
+                        data: 'ratingValue='+ratingValue,
+                    }).then(function (html) {
+                        var $newContainer = $('<div/>').html(html)
+                            .find('#' + $containerReviews.attr('id'));
+                        $containerReviews.replaceWith($newContainer);
+                        TwentyUa.initUi($newContainer);
+                    });
+                }
+
+            });
+
+            $(".js-reset_rating_filter").on("click", function (ev) {
+                ev.preventDefault();
+                $('.js-get_review_by_rating').each(function () {
+                    $(this).removeClass('active');
+                })
+                $('.btn-hidden').addClass('d-none');
+                $(".btn-hidden").removeClass('d-flex');
+                var pathRender = $(ev.target).attr("data-reset-path");
+
+                var $containerReviews = $("#company-reviews");
+
+                $.ajax({
+                    type: "GET",
+                    url: pathRender,
+                }).then(function (html) {
+                    var $newContainer = $('<div/>').html(html)
+                        .find('#' + $containerReviews.attr('id'));
+                    $containerReviews.replaceWith($newContainer);
+                    TwentyUa.initUi($newContainer);
+                });
+            });
+        });
+    </script>
+
+</div>
