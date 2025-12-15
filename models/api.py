@@ -8,7 +8,7 @@ class ReviewRequest(BaseModel):
 app = FastAPI()
 
 model = TFSMLayer(
-    "model_attention_full",          # ← ПАПКА, не файл
+    "model_attention_full", 
     call_endpoint="serving_default"
 )
 

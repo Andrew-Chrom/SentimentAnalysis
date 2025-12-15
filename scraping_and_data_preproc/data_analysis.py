@@ -5,8 +5,7 @@ import seaborn as sns
 
 csv_path = '../csv/reviews_labeled.csv'
 df = pd.read_csv(csv_path)
-# Assuming you have a DataFrame 'df' with a column 'Review Text'
-# Extract the review text
+
 reviews_text = ' '.join(df['review'])
 
 # Create a WordCloud object
